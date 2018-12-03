@@ -23,15 +23,16 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="84dp"
-        android:layout_marginStart="84dp"
-        android:drawableLeft="@drawable/padlock"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:drawableLeft="@drawable/user"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Nama Lengkap"
         android:inputType="textFilter"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -40,45 +41,47 @@
         android:id="@+id/editText2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="84dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
 1234567890!@#$%^*()_+~`|\]}[{?"
-        android:drawableLeft="@drawable/padlock"
+        android:drawableLeft="@drawable/mail"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="textFilter"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 
     <EditText
         android:id="@+id/editText3"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="84dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
 1234567890!@#$%^*()_+~`|\]}[{?"
-        android:drawableLeft="@drawable/padlock"
+        android:drawableLeft="@drawable/user"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Username"
         android:inputType="textFilter"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
     <EditText
         android:id="@+id/editText4"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="84dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
 1234567890!@#$%^*()_+~`|\]}[{?"
         android:drawableLeft="@drawable/padlock"
@@ -86,7 +89,28 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPersonName"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="7dp"
+
+        android:background="@drawable/mybutton"
+        android:padding="10dp"
+        android:text="Daftar"
+        android:textColor="#ffffff"
+
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+
+
 </android.support.constraint.ConstraintLayout>
