@@ -1,10 +1,11 @@
 package com.example.dioramadhan.traveladub;
 
+import android.net.Uri;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-public class LoginRegister extends AppCompatActivity implements LoginFragment.OnFragmentInteractionListener {
+public class LoginRegister extends AppCompatActivity implements LoginFragment.OnFragmentInteractionListener, RegisterFragment.OnFragmentInteractionListener {
     FragmentManager _FM;
 
     @Override
@@ -22,5 +23,10 @@ public class LoginRegister extends AppCompatActivity implements LoginFragment.On
     public void onFragmentInteraction() {
         RegisterFragment frR = RegisterFragment.newInstance("0","0");
         _FM.beginTransaction().replace(R.id.fragmentLayout,frR).addToBackStack(null).commit();
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+        
     }
 }

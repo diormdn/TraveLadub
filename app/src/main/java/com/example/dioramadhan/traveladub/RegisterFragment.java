@@ -10,12 +10,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class RegisterFragment extends Fragment {
 
     private EditText namaTxt, emailTxt, usernameTxt, passwordTxt;
     private ImageView imageView;
     private Button btnDaftar;
+    private TextView txtSudahPunyaAkun, txtMasuk;
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -60,6 +62,8 @@ public class RegisterFragment extends Fragment {
         this.emailTxt = (EditText) rootView.findViewById(R.id.emailTxt);
         this.usernameTxt = (EditText) rootView.findViewById(R.id.usernameTxt);
         this.passwordTxt = (EditText) rootView.findViewById(R.id.passwordTxt);
+        this.txtSudahPunyaAkun = (TextView) rootView.findViewById(R.id.txtSudahPunyaAkun);
+        this.txtMasuk = (TextView) rootView.findViewById(R.id.txtMasuk);
     }
 
     public void onButtonPressed(Uri uri) {
