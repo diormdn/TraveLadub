@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "808930455634",
+    "firebase_url": "https://traveladub.firebaseio.com",
+    "project_id": "traveladub",
+    "storage_bucket": "traveladub.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808930455634:android:4d5c0fa7641e8c9f",
+        "android_client_info": {
+          "package_name": "com.example.dioramadhan.traveladub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "808930455634-e2cdbgsqf1n7a7j4vmmtj1o2u4e3tb7a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dioramadhan.traveladub",
+            "certificate_hash": "c75a8901b6057ea510ff6a9ebd98eb10e88879db"
+          }
+        },
+        {
+          "client_id": "808930455634-p9247e28af30o61rm35itopc3n0rlgs2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfoZzFWlDe2Yxg5yCeZdF6tiSJathpHkU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "808930455634-p9247e28af30o61rm35itopc3n0rlgs2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
