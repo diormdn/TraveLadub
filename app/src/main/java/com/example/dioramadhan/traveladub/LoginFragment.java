@@ -5,6 +5,7 @@ import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,6 +66,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         this.masukBtn = (Button) rootView.findViewById(R.id.masukBtn);
         this.txtBelumPunyaAkun = (TextView) rootView.findViewById(R.id.txtBelumPunyaAkun);
         this.txtDaftar = (TextView) rootView.findViewById(R.id.txtDaftar);
+        this.txtDaftar.setOnClickListener(this);
     }
 
     public void onButtonPressed(Uri uri) {
@@ -93,6 +95,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.txtDaftar){
+            Log.d("aaaa","masukk");
             mListener.onFragmentInteraction();
         }
     }
