@@ -93,6 +93,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         this.txtBelumPunyaAkun = rootView.findViewById(R.id.txtBelumPunyaAkun);
         this.txtDaftar = rootView.findViewById(R.id.txtDaftar);
         this.txtDaftar.setOnClickListener(this);
+        this.masukBtn.setOnClickListener(this);
     }
 
     public void onButtonPressed(Uri uri) {
