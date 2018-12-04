@@ -17,90 +17,58 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="160dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="83dp"
+        android:layout_marginLeft="101dp"
+        android:layout_marginRight="83dp"
+        android:layout_marginStart="101dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/tl"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/namaTxt"
-        android:layout_width="0dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:drawableLeft="@drawable/user"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Nama Lengkap"
         android:inputType="textFilter"
+        android:nextFocusDown="@+id/emailTxt"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        android:nextFocusDown="@+id/emailTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/emailTxt"
-        android:layout_width="0dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
         android:drawableLeft="@drawable/mail"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
+        android:nextFocusDown="@+id/emailTxt"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/namaTxt"
-        android:nextFocusDown="@+id/emailTxt" />
-
-    <EditText
-        android:id="@+id/emailTxt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="10dp"
-        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
-1234567890!@#$%^*()_+~`|\]}[{?"
-        android:drawableLeft="@drawable/user"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="Username"
-        android:inputType="textFilter"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailTxt"
-        android:nextFocusDown="@+id/passwordTxt"
-        />
-
-    <EditText
-        android:id="@+id/passwordTxt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="32dp"
-        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
-1234567890!@#$%^*()_+~`|\]}[{?"
-        android:drawableLeft="@drawable/padlock"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/namaTxt" />
 
     <Button
         android:id="@+id/btnDaftar"
@@ -109,14 +77,15 @@
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
 
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/mybutton"
         android:padding="10dp"
-        android:text="Daftar"
 
+        android:text="Daftar"
         android:textColor="#ffffff"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordTxt" />
 
@@ -124,9 +93,9 @@
         android:id="@+id/txtSudahPunyaAkun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
         android:layout_marginLeft="90dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="24dp"
         android:text="Sudah punya akun?"
         android:textColor="@android:color/black"
         android:textStyle="bold"
@@ -141,7 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text="Masuk"
         android:textColor="#3498db"
         android:textStyle="bold"
@@ -149,6 +118,25 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/txtSudahPunyaAkun"
         app:layout_constraintTop_toBottomOf="@+id/btnDaftar" />
+
+    <EditText
+        android:id="@+id/passwordTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/padlock"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailTxt" />
 
 
 </android.support.constraint.ConstraintLayout>
