@@ -1,8 +1,10 @@
 package com.example.dioramadhan.traveladub;
 
 import android.content.Context;
-import android.net.Uri;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,8 +13,18 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class RegisterFragment extends Fragment {
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.gson.Gson;
+
+public class RegisterFragment extends Fragment implements View.OnClickListener {
 
     private EditText namaTxt, emailTxt, usernameTxt, passwordTxt;
     private ImageView imageView;
@@ -57,18 +69,21 @@ public class RegisterFragment extends Fragment {
     }
 
     public void initView(View rootView){
-        this.imageView = (ImageView) rootView.findViewById(R.id.imageView);
-        this.namaTxt = (EditText) rootView.findViewById(R.id.namaTxt);
-        this.emailTxt = (EditText) rootView.findViewById(R.id.emailTxt);
-        this.usernameTxt = (EditText) rootView.findViewById(R.id.usernameTxt);
-        this.passwordTxt = (EditText) rootView.findViewById(R.id.passwordTxt);
-        this.txtSudahPunyaAkun = (TextView) rootView.findViewById(R.id.txtSudahPunyaAkun);
-        this.txtMasuk = (TextView) rootView.findViewById(R.id.txtMasuk);
+        this.imageView = rootView.findViewById(R.id.imageView);
+        this.namaTxt = rootView.findViewById(R.id.namaTxt);
+        this.emailTxt = rootView.findViewById(R.id.emailTxt);
+        this.usernameTxt = rootView.findViewById(R.id.emailTxt);
+        this.passwordTxt = rootView.findViewById(R.id.passwordTxt);
+        this.txtSudahPunyaAkun = rootView.findViewById(R.id.txtSudahPunyaAkun);
+        this.txtMasuk = rootView.findViewById(R.id.txtMasuk);
+        this.btnDaftar = rootView.findViewById(R.id.btnDaftar);
+        this.txtMasuk.setOnClickListener(this);
+        this.btnDaftar.setOnClickListener(this);
     }
 
-    public void onButtonPressed(Uri uri) {
+    public void onButtonPressed(String string) {
         if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
+            mListener.onRegisterFragmentInteraction();
         }
     }
 
@@ -89,8 +104,46 @@ public class RegisterFragment extends Fragment {
         mListener = null;
     }
 
+    @Override
+    public void onClick(View v) {
+        if(v.getId() == R.id.txtMasuk){
+            mListener.onRegisterFragmentInteraction();
+        }else{
+
+            final FirebaseAuth mAuth = FirebaseAuth.getInstance();
+            mAuth.createUserWithEmailAndPassword(emailTxt.getText().toString(),passwordTxt.getText().toString())
+                    .addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
+
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(task.isSuccessful()){
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                Pengguna mPengguna = new Pengguna(namaTxt.getText().toString(),
+                                        emailTxt.getText().toString(),
+                                        usernameTxt.getText().toString());
+
+                                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                DatabaseReference myRef = database.getReference("profil");
+                                myRef.child(user.getUid()).setValue(mPengguna);
+
+                                SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
+                                SharedPreferences.Editor prefsEditor = mPrefs.edit();
+                                Gson gson = new Gson();
+                                String json = gson.toJson(mPengguna);
+                                prefsEditor.putString("pengguna", json);
+                                prefsEditor.apply();
+                                mListener.onRegisterFragmentInteraction();
+                            }
+                            else{
+                                Toast.makeText(getActivity(), "Email Sudah Terdaftar, " + namaTxt.getText().toString(), Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+        }
+    }
+
 
     public interface OnFragmentInteractionListener {
-        void onFragmentInteraction(Uri uri);
+        void onRegisterFragmentInteraction();
     }
 }
