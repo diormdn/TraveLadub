@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="12dp"
+    android:layout_height="100dp"
+    android:layout_marginBottom="8dp"
+    android:clipToPadding="true"
+    android:layout_marginTop="4dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/gambarTempat"
+        android:layout_width="134dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/museumangkut2" />
+
+    <TextView
+        android:id="@+id/namaTempat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Museum Angkut"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="18sp"
+        app:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/gambarTempat"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/weekdaysTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Weekdays"
+        android:textColor="#e67e22"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/namaTempat"
+        app:layout_constraintTop_toBottomOf="@+id/namaTempat" />
+
+    <TextView
+        android:id="@+id/valWeekdays"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="07.00 - 18.00"
+        app:layout_constraintEnd_toEndOf="@+id/namaTempat"
+        app:layout_constraintStart_toEndOf="@+id/weekdaysTxt"
+        app:layout_constraintTop_toBottomOf="@+id/namaTempat" />
+
+    <TextView
+        android:id="@+id/weekendTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Weekend  "
+        android:textColor="#e67e22"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/valWeekend"
+        app:layout_constraintStart_toStartOf="@+id/weekdaysTxt"
+        app:layout_constraintTop_toBottomOf="@+id/weekdaysTxt" />
+
+    <TextView
+        android:id="@+id/valWeekend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="09.00 - 16.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/weekendTxt"
+        app:layout_constraintTop_toBottomOf="@+id/valWeekdays" />
+
+</android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

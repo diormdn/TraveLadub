@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff">
+
+
+    <TextView
+        android:id="@+id/lbl_namawisata"
+        android:layout_width="117dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="260dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="260dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="8dp"
+        android:text="Museum Angkut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gbr2" />
+
+    <TextView
+        android:id="@+id/deskripsiwisata"
+        android:layout_width="373dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="8dp"
+        android:text="Terletak di kawasan Kota Wisata Batu. Museum ini mempunyai beberapa macam koleksi transportasi mulai dari kenadaraan tradisional, clasik hingga kendaraan modern. Pada museum ini terdapat banyak lokasi foto. Jangan sampai lupa membawa kamera"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_jambuka"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_namawisata" />
+
+    <TextView
+        android:id="@+id/lbl_jambuka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="288dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="288dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="8dp"
+        android:text="Opening hours : "
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deskripsiwisata" />
+
+    <TextView
+        android:id="@+id/jam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="173dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="173dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="8dp"
+        android:text="Weekdays : 12.00 – 20.00
+                      Weekends : 12.00 – 20.00"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_jambuka" />
+
+    <TextView
+        android:id="@+id/lokasi"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="8dp"
+        android:text=" Jl. Sultan Agung No. 2, Ngaglik, Kecamatan Batu, Kota Batu"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/isi_harga"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/jam" />
+
+    <TextView
+        android:id="@+id/lbl_harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="338dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="338dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="8dp"
+        android:text="Harga :"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/isi_harga"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+    <ImageView
+        android:id="@+id/gbr1"
+        android:layout_width="269dp"
+        android:layout_height="199dp"
+        app:layout_constraintEnd_toStartOf="@+id/gbr3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/museumangkut" />
+
+    <ImageView
+        android:id="@+id/gbr2"
+        android:layout_width="137dp"
+        android:layout_height="101dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:adjustViewBounds="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gbr1"
+        app:layout_constraintTop_toBottomOf="@+id/gbr3"
+        app:srcCompat="@drawable/museumangkut2" />
+
+    <ImageView
+        android:id="@+id/gbr3"
+        android:layout_width="137dp"
+        android:layout_height="101dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/gbr1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/museumangkut3" />
+
+    <TextView
+        android:id="@+id/isi_harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="189dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="189dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="5dp"
+        android:text="Weekdays : Rp. 70.000
+                      Weekend : Rp. 100.000"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/locBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_harga" />
+
+    <Button
+        android:id="@+id/locBtn"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="8dp"
+
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/mybutton"
+        android:padding="10dp"
+        android:text="Lokasi"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/telpBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/isi_harga" />
+
+    <Button
+        android:id="@+id/telpBtn"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="8dp"
+
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+
+
+        android:layout_marginTop="8dp"
+        android:background="@drawable/mybutton"
+        android:padding="10dp"
+        android:text="Telepon"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cariBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/locBtn"
+        app:layout_constraintTop_toBottomOf="@+id/isi_harga"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/cariBtn"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="8dp"
+
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+
+
+        android:background="@drawable/mybutton"
+        android:padding="10dp"
+        android:text="Cari Tiket"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/telpBtn"
+        app:layout_constraintTop_toBottomOf="@+id/isi_harga"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_harga"
+        app:layout_constraintEnd_toStartOf="@+id/lokasi"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jam"
+        app:srcCompat="@drawable/placeholder" />
+
+</android.support.constraint.ConstraintLayout>
